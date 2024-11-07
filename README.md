@@ -91,7 +91,7 @@ edit `Endless.json` and set area1 to desire `SiteID` from `UltraEndlessSite.json
 edit `Config.json` and set UseLocalCache to True, after that put data cache folder from AppData `Honkai Impact 3rd Game` into `resources/statics`
 
 # Support
-Join [Discord](discord.gg/MdHC4AJvec) for support
+Join [Discord](https://discord.gg/MdHC4AJvec) for support
 
 # Credits
 - am25
