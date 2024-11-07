@@ -2,7 +2,7 @@
 # MikuBH3
 
 A Server emulator for version 7.9 of a certain adventure anime game
-![screenshot](https://github.com/MikuLeaks/MikuBH3-PS/blob/master/screenshot.png)
+![screenshot](https://github.com/MikuLeaks/MikuBH3-PS/raw/main/screenshot.png)
 
 
 ## Requirements
@@ -80,7 +80,7 @@ py hi3
 ```
 
 after game running wait for 20-30 seconds till patch loaded and press Try Again
-![Patch](https://github.com/MikuLeaks/MikuBH3-PS/blob/master/patch.png)
+![Patch](https://github.com/MikuLeaks/MikuBH3-PS/raw/main/patch.png)
 till it look like this
 
 ## Change Stage Superstring Dimension (Abyss)
