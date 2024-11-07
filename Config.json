@@ -1,0 +1,15 @@
+{
+    "LogLevel": "INFO",
+    "MaxSessions": 10,
+    "GameServer": {
+        "Ip": "127.0.0.1",
+        "Port": 16100
+    },
+    "SdkServer": {
+        "Ip": "127.0.0.1",
+        "Port": 80
+    },
+    "VerboseLevel":1,
+    "RegionName":"MikuBH3",
+    "UseLocalCache":false
+}

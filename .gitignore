@@ -1,0 +1,6 @@
+
+/.vscode
+*.pyc
+/resources
+/game_server/packet/test
+/lib/proto

@@ -1,0 +1,71 @@
+import betterproto
+from game_server.net.session import Session
+from lib.proto import (
+    TvtCardGetDataReq,
+    TvtCardGetDataRsp,
+    TvtCard,
+    TvtCardSuite
+)
+
+async def handle(session: Session, msg: TvtCardGetDataReq) -> betterproto.Message:
+    return TvtCardGetDataRsp(
+        retcode=0,
+        card_list=[
+            TvtCard(
+                card_id=25,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=26,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=27,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=28,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=29,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=30,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=31,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=32,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=33,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=34,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=35,
+                card_level=1
+            ),
+            TvtCard(
+                card_id=36,
+                card_level=1
+            )
+        ],
+        is_take_season_return=True,
+        suite_list=[
+            TvtCardSuite(
+                card_id_list=[
+                    25,26,27,31
+                ]
+            )
+        ]
+    )
