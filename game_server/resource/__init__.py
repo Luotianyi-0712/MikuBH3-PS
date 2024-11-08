@@ -2,16 +2,18 @@ import json
 import traceback
 from typing import Dict, Type, TypeVar, Optional, Any, List
 
-from game_server.config.log import Error, Info
+from utils.logger import Error, Info
 from game_server.resource.base_resource import BaseResource
 from game_server.resource.decorators import resource_registry
 import game_server.resource.configdb  # noqa: F401
 
 T = TypeVar("T", bound=BaseResource)
 
+
 def filter_data(cls: Type, data):
     valid_fields = cls.__annotations__.keys()
     return {field: data.get(field, None) for field in valid_fields}
+
 
 class ResourceManager:
     def __init__(self):
@@ -56,5 +58,6 @@ class ResourceManager:
     @staticmethod
     def instance():
         return resource_manager
+
 
 resource_manager = ResourceManager()
