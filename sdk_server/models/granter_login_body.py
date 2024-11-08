@@ -1,12 +1,11 @@
-# sdkserver/models/granter_login_body.py
-
 from pydantic import BaseModel
-from typing import Optional
+
 
 class GranterLoginBodyData(BaseModel):
     uid: str
     guest: bool
     token: str
+
 
 class GranterLoginBody(BaseModel):
     app_id: int

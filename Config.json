@@ -1,15 +1,19 @@
 {
-    "LogLevel": "INFO",
-    "MaxSessions": 10,
-    "GameServer": {
-        "Ip": "127.0.0.1",
-        "Port": 16100
-    },
-    "SdkServer": {
-        "Ip": "127.0.0.1",
-        "Port": 80
-    },
-    "VerboseLevel":1,
-    "RegionName":"MikuBH3",
-    "UseLocalCache":false
+  "LogLevel": "INFO",
+  "GameServer": {
+    "IP": "127.0.0.1",
+    "Port": 16100
+  },
+  "SDKServer": {
+    "IP": "127.0.0.1",
+    "Port": 80
+  },
+  "VerboseLevel": 1,
+  "RegionName": "MikuBH3",
+  "UseLocalCache": false,
+  "AESKeys": {
+    "7.9.0_gf_pc": "36 31 65 37 64 33 65 66 33 32 30 63 31 35 66 66 61 64 37 61 66 32 31 34 61 64 65 64 32 34 33 38",
+    "7.8.0_os_pc": "64 34 32 33 30 30 31 62 32 36 38 34 62 33 62 30 61 33 30 38 66 37 65 35 63 30 61 38 66 33 65 32"
+  },
+  "EnableDispatchEncryption": true
 }
