@@ -17,25 +17,28 @@ async def handle(session: Session, msg: UltraEndlessGetMainDataReq) -> betterpro
         data = json.load(file)
 
     site = data.get("area1",781009)
+    group = data.get("grouplevel",9)
+    dynamic = data.get("dynamic",500)
+    cupnum = data.get("cupnum",1600)
     return UltraEndlessGetMainDataRsp(
         retcode=0,
-        dynamic_hard_level=458,
-        cup_num=1275,
+        dynamic_hard_level=dynamic,
+        cup_num=cupnum,
         endless_player_list=[
             UltraEndlessPlayer(
-                cup_num=1275,
-                group_level=7,
+                cup_num=cupnum,
+                group_level=group,
                 uid=1337
             )
         ],
-        group_level=7,
+        group_level=group,
         last_settle_info=UltraEndlessSettleInfo(
-            cup_num=1275,
-            cup_num_after_schedule_settle=1275,
+            cup_num=cupnum,
+            cup_num_after_schedule_settle=cupnum,
             cup_num_after_season_settle=975,
-            cup_num_before=1275,
+            cup_num_before=cupnum,
             cup_num_before_season_settle=975,
-            group_level=7,
+            group_level=group,
             group_member_num=20,
             max_stage_score=21792,
             mmr_score=1618,
