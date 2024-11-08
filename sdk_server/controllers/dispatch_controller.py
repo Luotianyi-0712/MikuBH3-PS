@@ -39,24 +39,95 @@ def query_gateway():
     gameserver = {"ip": Config.GameServer.IP, "port": Config.GameServer.Port}
 
     response_data = {
-        "retcode": 0,
-        "msg": "",
-        "region_name": Config.RegionName,
         "account_url": f"http://{Config.GameServer.IP}/account",
         "account_url_backup": f"http://{Config.GameServer.IP}/account",
         "asset_bundle_url_list": get_asset_bundle_url_list(version),
-        "ex_audio_and_video_url_list": get_ex_audio_and_video_url_list(version),
+        # "ex_audio_and_video_url_list": get_ex_audio_and_video_url_list(version),
         "ex_resource_url_list": get_ex_resource_url_list(version),
-        "ext": get_ext(version),
+        # TODO: Revisit this
+        "ext": {
+            "1058891250": "1",
+            "1095990871": "1",
+            "1245473982": "1",
+            "1344653749": "0",
+            "1360176971": "1",
+            "1501014376": "1",
+            "1744250417": "1",
+            "1745366296": "2",
+            "1839631329": "1",
+            "1887219073": "1",
+            "203732861": "1",
+            "2110930505": "1",
+            "308332524": "1",
+            "763305743": "1",
+        },
         "gameserver": gameserver,
         "gateway": gameserver,
         "is_data_ready": True,
+        "manifest": {
+            "Asb": {
+                "android": {
+                    "enable_time": 0.0,
+                    "revision": "7.9.0.3",
+                    "suffix": "32e095538f496ce873b84f7d800ad9fd",
+                },
+                "iphone": {
+                    "enable_time": 0.0,
+                    "revision": "7.9.0.3",
+                    "suffix": "899786bb3ad18295da593e3a930e4d7c",
+                },
+                "pc": {
+                    "enable_time": 0.0,
+                    "revision": "7.9.0.3",
+                    "suffix": "6bee17b8b2ffec47182c8c3c9aed21a9",
+                },
+            },
+            "AsbPreDownload": {
+                "android": {
+                    "enable_time": 1730174400.0,
+                    "encrypt_key": "298FC85F5988308213B6462562A3B095",
+                    "revision": "7.9.0.0",
+                    "suffix": "874af0171cec4d992537ed029906bc6e",
+                },
+                "iphone": {
+                    "enable_time": 1730174400.0,
+                    "encrypt_key": "298FC85F5988308213B6462562A3B095",
+                    "revision": "7.9.0.0",
+                    "suffix": "166391e65f2d4de973b1cd87d583a230",
+                },
+            },
+            "Audio": {
+                "platform": {
+                    "Android": "manifest_2291f5be319191f1c1473e1c8abdd325.m",
+                    "Windows": "manifest_b12c79d9ec59454e8695e049a4b2aa90.m",
+                    "iOS": "manifest_6b1113eeaf6cd9e8b149efeeff64e4a9.m",
+                },
+                "revision": 727034,
+            },
+            "AudioPreDownload": {
+                "enable_time": 1730174400,
+                "platform": {
+                    "Android": "manifest_74bc85237052ae2eba6a1937f90aa39e.m",
+                    "Windows": "manifest_73a4b3611cff2b3bdd20405b8528e8f9.m",
+                    "iOS": "manifest_5e3020c93eb651f8c8c25a87aea860f5.m",
+                },
+                "revision": 725668,
+            },
+            "VideoEncrypt": {
+                "filename": "product_video_encrypt_0d89026956cc2bdd5714d4515f1d5df5"
+            },
+        },
+        "msg": "",
         "oaserver_url": f"http://{Config.GameServer.IP}/oaserver",
+        "region_name": Config.RegionName,
+        "retcode": 0,
         "server_cur_time": int(time.time()),
         "server_cur_timezone": 8,
         "server_ext": {
-            "cdkey_url": f"http://{Config.GameServer.IP}/common",
-            "mihoyo_sdk_env": "2",
+            "cdkey_url": "http://127.0.0.1/common/",
+            "is_official": "1",
+            "mihoyo_sdk_env": "0",
+            "use_account_web_url": "1",
         },
     }
 
