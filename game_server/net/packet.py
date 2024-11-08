@@ -1,5 +1,5 @@
 import struct
-from game_server.protocol.cmd_id import CmdID
+from game_server.net.cmd_id import CmdID
 
 class Packet:
     def __init__(self, buf: bytes):
