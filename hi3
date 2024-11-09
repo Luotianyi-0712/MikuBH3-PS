@@ -1,5 +1,5 @@
 import threading
-from sdk_server import HandleSdkServer, HandleSslSdkServer
+from sdk_server import HandleSdkServer
 from game_server import GameServer
 from utils.config import Config
 
@@ -7,10 +7,7 @@ SdkThread = threading.Thread(
     target=HandleSdkServer,
     args=(Config.GameServer.IP, Config.GameServer.Port, Config.SDKServer.Port),
 )
-SdkThreadSsl = threading.Thread(target=HandleSslSdkServer)
 SdkThread.start()
-SdkThreadSsl.start()
-
 
 gameserver = GameServer()
 GameThread = threading.Thread(

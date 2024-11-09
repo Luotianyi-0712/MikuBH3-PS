@@ -73,10 +73,3 @@ def HandleSdkServer(ServerIp, GameServerPort, SdkServerPort):
     Info(f"HTTP server started on port {SdkServerPort}")
 
     app.run(host=ServerIp, port=SdkServerPort)
-
-
-def HandleSslSdkServer():
-    log = logging.getLogger("werkzeug")
-    log.setLevel(logging.ERROR)
-    Info("HTTPS server started on port 443")
-    app.run(host="127.0.0.1", port=443, ssl_context="adhoc")
