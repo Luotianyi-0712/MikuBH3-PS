@@ -1,6 +1,7 @@
 # MikuBH3
 
 A Server emulator for version 7.9 of a certain adventure anime game
+
 ![screenshot](https://github.com/MikuLeaks/MikuBH3-PS/raw/main/screenshot.png)
 
 ## Features
@@ -10,6 +11,7 @@ A Server emulator for version 7.9 of a certain adventure anime game
 - Superstring Dimension (Abyss)
 - Universial Mirage
 - Story Chapter 1 - 42
+- Character Tutorial
 
 ## Requirements
 
@@ -93,7 +95,7 @@ Join [Discord](https://discord.gg/MdHC4AJvec) for support
 
 - Part 2 Story & Open world
 
-- Character Tutorial
+- ~~Character Tutorial~~
 
 # Credits
 
