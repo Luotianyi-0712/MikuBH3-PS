@@ -13,13 +13,14 @@ from lib.proto import (
 )
 
 async def handle(session: Session, msg: UltraEndlessGetMainDataReq) -> betterproto.Message:
-    with open("Endless.json", "r") as file:
+    with open("Battle.json", "r") as file:
         data = json.load(file)
 
-    site = data.get("area1",781009)
-    group = data.get("grouplevel",9)
-    dynamic = data.get("dynamic",500)
-    cupnum = data.get("cupnum",1600)
+    endless_data = data.get("endless", {})
+    site = endless_data.get("area1", 781009)
+    group = endless_data.get("grouplevel", 9)
+    dynamic = endless_data.get("dynamic", 500)
+    cupnum = endless_data.get("cupnum", 1600)
     return UltraEndlessGetMainDataRsp(
         retcode=0,
         dynamic_hard_level=dynamic,

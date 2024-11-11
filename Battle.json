@@ -1,0 +1,14 @@
+{
+    "endless":
+    {
+        "area1":791005,
+        "grouplevel":8,
+        "dynamic":510,
+        "cupnum":1800
+    },
+    "memo":
+    {
+        "boss_ids": [51021,15026,18225]
+    }
+    
+}

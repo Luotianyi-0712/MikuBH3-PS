@@ -12,6 +12,7 @@ A Server emulator for version 7.9 of a certain adventure anime game
 - Universial Mirage
 - Story Chapter 1 - 42
 - Character Tutorial
+- Memorial Arena
 
 ## Requirements
 
@@ -55,10 +56,15 @@ To run the project use cmd or vscode and run
 ```python
 py hi3
 ```
+## Changing Stage in Abyss/Memorial Using JSON
 
-## Change Stage Superstring Dimension (Abyss)
+- **Superstring Dimension (Abyss)**
 
-edit `Endless.json` and set area1 to desire `SiteID` from `UltraEndlessSite.json`
+    Open the `Battle.json` file and update `area1` to the preferred `SiteID` from `UltraEndlessSite.json`.
+
+- **Memorial Arena**
+
+    Open the `Battle.json` file and update the `boss_ids` as needed. You can find `boss_id` values in the `BossIdList` within `ExBossMonsterSchedule.json`.
 
 ## Use Local Patch Assets
 
@@ -72,7 +78,7 @@ Join [Discord](https://discord.gg/MdHC4AJvec) for support
 
 - Commands
 
-- Memorial Arena
+- ~~Memorial Arena~~
 
 - Elysian Realm
 

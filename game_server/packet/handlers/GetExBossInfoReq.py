@@ -1,4 +1,5 @@
 import betterproto
+import json
 from game_server.net.session import Session
 from lib.proto import (
     GetExBossInfoReq,
@@ -8,22 +9,20 @@ from lib.proto import (
 )
 
 async def handle(session: Session, msg: GetExBossInfoReq) -> betterproto.Message:
+    with open("Battle.json", "r") as file:
+        data = json.load(file)
     return GetExBossInfoRsp(
         retcode=0,
         boss_info=ExBossInfo(
             boss_id_list=[
                 ExBossIdInfo(
-                    boss_id=48016
-                ),
-                ExBossIdInfo(
-                    boss_id=41021
-                ),
-                ExBossIdInfo(
-                    boss_id=13021
+                    boss_id=id
                 )
+                for id in data.get("memo", {}).get("boss_ids", [])
             ],
-            cur_max_enter_times=714,
+            cur_max_enter_times=18,
             rank_id=104,
-            schedule_id=10359
+            schedule_id=10377,
+            now_schedule_id=10377
         )
     )
