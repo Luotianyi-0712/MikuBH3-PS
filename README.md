@@ -13,6 +13,7 @@ A Server emulator for version 7.9 of a certain adventure anime game
 - Story Chapter 1 - 42
 - Character Tutorial
 - Memorial Arena
+- Commands
 
 ## Requirements
 
@@ -66,6 +67,13 @@ py hi3
 
     Open the `Battle.json` file and update the `boss_ids` as needed. You can find `boss_id` values in the `BossIdList` within `ExBossMonsterSchedule.json`.
 
+## Commands
+```
+/help. Displays a list of available commands.
+/maxskill {avatar_id | all}. Maximize the skills of a specific avatar. Use 'all' to maximize the skills of all avatars.
+/rank {avatar_id | all} {rank}. Edit rank of a specific avatar or use 'all' to update rank of all avatars.
+```
+
 ## Use Local Patch Assets
 
 edit `Config.json` and set UseLocalCache to True, after that put data cache folder from AppData `Honkai Impact 3rd Game` into `resources/statics`
@@ -76,7 +84,7 @@ Join [Discord](https://discord.gg/MdHC4AJvec) for support
 
 # To-Do List
 
-- Commands
+- ~~Commands~~
 
 - ~~Memorial Arena~~
 
