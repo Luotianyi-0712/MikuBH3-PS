@@ -61,6 +61,13 @@ class SaveData:
                                 "Exp": get_item.exp,
                                 "SlotNum": get_item.slot_num,
                                 "IsLocked" : get_item.is_locked,
+                                "RuneLists": [
+                                    {
+                                        "RuneId":rune.rune_id,
+                                        "strengthPercent":rune.strength_percent
+                                    }
+                                    for rune in get_item.rune_list
+                                ],
                                 "EquipAvatarID" : get_item.equip_avatar_id
                             }
                         }

@@ -1,7 +1,7 @@
 import dataclasses
 from database import mongo
 from game_server.game.avatar.avatar_manager import AvatarManager,Skill,AvatarSubSkill,AvatarTeamManager
-from game_server.game.inventory.inventory_manager import InventoryManager,Material,Weapon,Stigmata
+from game_server.game.inventory.inventory_manager import InventoryManager,Material,Weapon,Stigmata,RuneList,RuneGroup
 from game_server.game.elf.elf_manager import ElfManager,ElfSkill
 from game_server.game.enum.item_type import MainType
 
@@ -107,7 +107,14 @@ class Player:
                     refine_value=item['RefineValue'],
                     promote_times=item['PromoteTimes'],
                     is_locked=item['IsLocked'],
-                    equip_avatar_id=item['EquipAvatarID']
+                    equip_avatar_id=item['EquipAvatarID'],
+                    rune_list=[
+                        RuneList(
+                            rune_id=rune['RuneId'],
+                            strength_percent=rune['strengthPercent']
+                        )
+                        for rune in item['RuneLists']
+                    ]
                 )
                 self.inventory.stigmata_items[item['UniqueID']] = stigmata
 

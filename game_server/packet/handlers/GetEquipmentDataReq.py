@@ -1,15 +1,14 @@
 import betterproto
 from typing import List
 from game_server.net.session import Session
-from game_server.resource import ResourceManager
-from game_server.resource.configdb.weapon_data import WeaponData
-from game_server.resource.configdb.stigmata_data import StigmataData
 from lib.proto import (
     GetEquipmentDataReq,
     GetEquipmentDataRsp,
     Material,
     Weapon,
     Stigmata,
+    StigmataRuneGroup,
+    StigmataRune
 )
 
 async def handle(session: Session, msg: GetEquipmentDataReq) -> betterproto.Message:
@@ -23,7 +22,8 @@ async def handle(session: Session, msg: GetEquipmentDataReq) -> betterproto.Mess
                 level=weapon.level,
                 exp=weapon.exp,
                 is_protected=weapon.is_locked,
-                is_extracted=weapon.is_extracted
+                is_extracted=weapon.is_extracted,
+                homology_level=3
             )
             for id, weapon in session.player.inventory.weapon_items.items()
         ],
@@ -33,10 +33,30 @@ async def handle(session: Session, msg: GetEquipmentDataReq) -> betterproto.Mess
                 id=stigmata.item_id,
                 level=stigmata.level,
                 exp=stigmata.exp,
-                slot_num=stigmata.slot_num,
+                slot_num=2,
                 refine_value=stigmata.refine_value,
                 promote_times=stigmata.promote_times,
-                is_protected=stigmata.is_locked
+                is_protected=stigmata.is_locked,
+                rune_list=[
+                    StigmataRune(
+                        rune_id=rune.rune_id,
+                        strength_percent=rune.strength_percent
+                    )
+                    for rune in stigmata.rune_list
+                ],
+                wait_select_rune_group_list=[
+                    StigmataRuneGroup(
+                        unique_id=index,
+                        rune_list=[
+                            StigmataRune(
+                                rune_id=rune.rune_id,
+                                strength_percent=rune.strength_percent
+                            )
+                            for rune in affix.rune_list
+                        ]
+                    )
+                    for index,affix in enumerate(stigmata.wait_select_rune_group_list, start=1)
+                ]
             )
             for id, stigmata in session.player.inventory.stigmata_items.items()
         ],

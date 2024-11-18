@@ -15,6 +15,16 @@ class Weapon:
     equip_avatar_id: int
 
 @dataclasses.dataclass
+class RuneList:
+    rune_id : int
+    strength_percent : int
+
+@dataclasses.dataclass
+class RuneGroup:
+    unique_id : int
+    rune_list : list[RuneList]
+
+@dataclasses.dataclass
 class Stigmata:
     item_id : int
     level : int
@@ -24,6 +34,8 @@ class Stigmata:
     promote_times : int
     is_locked : bool
     equip_avatar_id : int
+    rune_list : list[RuneList] = dataclasses.field(default_factory=list)
+    wait_select_rune_group_list: list[RuneGroup] = dataclasses.field(default_factory=list)
 
 @dataclasses.dataclass
 class InventoryManager:
