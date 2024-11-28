@@ -12,8 +12,168 @@
   "RegionName": "MikuBH3",
   "UseLocalCache": false,
   "AESKeys": {
-    "7.9.0_gf_pc": "36 31 65 37 64 33 65 66 33 32 30 63 31 35 66 66 61 64 37 61 66 32 31 34 61 64 65 64 32 34 33 38",
-    "7.8.0_os_pc": "64 34 32 33 30 30 31 62 32 36 38 34 62 33 62 30 61 33 30 38 66 37 65 35 63 30 61 38 66 33 65 32"
+    "7.9.0": "36 31 65 37 64 33 65 66 33 32 30 63 31 35 66 66 61 64 37 61 66 32 31 34 61 64 65 64 32 34 33 38",
+    "7.8.0": "64 34 32 33 30 30 31 62 32 36 38 34 62 33 62 30 61 33 30 38 66 37 65 35 63 30 61 38 66 33 65 32"
   },
-  "EnableDispatchEncryption": true
+  "EnableDispatchEncryption": true,
+  "HotpatchConfig": {
+    "7.9.0_os_pc": {
+      "ext": {
+        "64252704": "0",
+        "98533854": "0",
+        "156881973": "GameEntry/EVA/StartLoading_Model",
+        "203732861": "1",
+        "234319255": "0",
+        "570959929": [
+          "autopatchos.honkaiimpact3.com/com.miHoYo.bh3oversea",
+          "bigfile-aliyun-os.honkaiimpact3.com/com.miHoYo.bh3oversea"
+        ],
+        "763305743": "1",
+        "935684753": [
+          "autopatchos.honkaiimpact3.com/com.miHoYo.bh3oversea",
+          "bigfile-aliyun-os.honkaiimpact3.com/com.miHoYo.bh3oversea"
+        ],
+        "1025006418": "2",
+        "1058891250": "1",
+        "1245473982": "1",
+        "1297410903": "10485760",
+        "1344653749": "0",
+        "1360176971": "1",
+        "1501014376": "1",
+        "1744250417": "1",
+        "1745366296": "0",
+        "1839631329": "1",
+        "1851523843": "0",
+        "1866171907": "1",
+        "1887219073": "1"
+      },
+      "manifest": {
+        "Asb": {
+          "android": {
+            "enable_time": 0,
+            "revision": "7.9.0.0",
+            "suffix": "d5a3bd0dd81edaa3fa2d3e436c1bce0d"
+          },
+          "iphone": {
+            "enable_time": 0,
+            "revision": "7.9.0.0",
+            "suffix": "fe6dd877612491a7508af7c584a88a17"
+          },
+          "pc": {
+            "enable_time": 0,
+            "revision": "7.9.0.0",
+            "suffix": "5e57f6090867ca698d288105495cb2c1"
+          }
+        },
+        "AsbPreDownload": {
+          "android": {
+            "enable_time": 1732593600,
+            "encrypt_key": "298FC85F5988308213B6462562A3B095",
+            "revision": "7.9.0.0",
+            "suffix": "d5a3bd0dd81edaa3fa2d3e436c1bce0d"
+          },
+          "iphone": {
+            "enable_time": 1732593600,
+            "encrypt_key": "298FC85F5988308213B6462562A3B095",
+            "revision": "7.9.0.0",
+            "suffix": "fe6dd877612491a7508af7c584a88a17"
+          }
+        },
+        "Audio": {
+          "platform": {
+            "Android": "manifest_76417dab7a9e4362eba7fbe8c4bad310.m",
+            "Windows": "manifest_97e3dab51f6259fe373ed73d4ea86bd3.m",
+            "iOS": "manifest_72b69e05e5541fa7c55a64a21b29edf3.m"
+          },
+          "revision": 730530
+        },
+        "AudioPreDownload": {
+          "enable_time": 1732593600,
+          "platform": {
+            "Android": "manifest_76417dab7a9e4362eba7fbe8c4bad310.m",
+            "Windows": "manifest_97e3dab51f6259fe373ed73d4ea86bd3.m",
+            "iOS": "manifest_72b69e05e5541fa7c55a64a21b29edf3.m"
+          },
+          "revision": 730530
+        },
+        "VideoEncrypt": {
+          "filename": "product_os_video_encrypt_2ab2e22bd8f7eda7c753618d081d3f01"
+        }
+      }
+    },
+    "7.9.0_gf_pc": {
+      "ext": {
+        "203732861": "1",
+        "308332524": "1",
+        "763305743": "1",
+        "1058891250": "1",
+        "1095990871": "1",
+        "1245473982": "1",
+        "1324767488": "前往米游社",
+        "1344653749": "0",
+        "1360176971": "1",
+        "1501014376": "1",
+        "1744250417": "1",
+        "1745366296": "2",
+        "1747909614": "https://m.bbs.mihoyo.com/bh3ToBBS.html",
+        "1794460900": "Recommend",
+        "1839631329": "1",
+        "1887219073": "1",
+        "2110930505": "1"
+      },
+      "manifest": {
+        "Asb": {
+          "android": {
+            "enable_time": 0,
+            "revision": "7.9.0.7",
+            "suffix": "ab2679bd532f9135b8aab5975206dfb0"
+          },
+          "iphone": {
+            "enable_time": 0,
+            "revision": "7.9.0.7",
+            "suffix": "c0ae76925b8dca4e62cb814877ba455a"
+          },
+          "pc": {
+            "enable_time": 0,
+            "revision": "7.9.0.7",
+            "suffix": "54ab3753430c9ad4a9ddae16eb8c386a"
+          }
+        },
+        "AsbPreDownload": {
+          "android": {
+            "enable_time": 1730174400,
+            "encrypt_key": "298FC85F5988308213B6462562A3B095",
+            "revision": "7.9.0.0",
+            "suffix": "874af0171cec4d992537ed029906bc6e"
+          },
+          "iphone": {
+            "enable_time": 1730174400,
+            "encrypt_key": "298FC85F5988308213B6462562A3B095",
+            "revision": "7.9.0.0",
+            "suffix": "166391e65f2d4de973b1cd87d583a230"
+          }
+        },
+        "Audio": {
+          "platform": {
+            "Android": "manifest_cb84c3bd719a8c06fa63b9e0a4092d8d.m",
+            "Windows": "manifest_8f7a55b834a47a6be376ec64739042a7.m",
+            "iOS": "manifest_9191d8f30c3634f9fc723d6fd1a75dc0.m"
+          },
+          "revision": 727721
+        },
+        "AudioPreDownload": {
+          "enable_time": 1730174400,
+          "platform": {
+            "Android": "manifest_74bc85237052ae2eba6a1937f90aa39e.m",
+            "Windows": "manifest_73a4b3611cff2b3bdd20405b8528e8f9.m",
+            "iOS": "manifest_5e3020c93eb651f8c8c25a87aea860f5.m"
+          },
+          "revision": 725668
+        },
+        "VideoEncrypt": {
+          "filename": "product_video_encrypt_b8619f8ad0069903815286b5c59c089c"
+        }
+      }
+    }
+  }
 }
