@@ -16,10 +16,9 @@ def query_dispatch():
         "region_list": [
             {
                 "retcode": 0,
-                "dispatch_url": f"http://{Config.GameServer.IP}/query_gateway",
+                "dispatch_url": f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/query_gateway",
                 "name": Config.RegionName,
-                "title": "",
-                "ext": get_ext(version),
+                "title": ""
             }
         ],
     }
@@ -39,25 +38,24 @@ def query_gateway():
     server = {"ip": Config.GameServer.IP, "port": Config.GameServer.Port}
 
     response_data = {
-        "account_url": f"http://{Config.GameServer.IP}/account",
-        "account_url_backup": f"http://{Config.GameServer.IP}/account",
+        "account_url": f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/account",
+        "account_url_backup": f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/account",
         "asset_bundle_url_list": get_asset_bundle_url_list(version),
         # "ex_audio_and_video_url_list": get_ex_audio_and_video_url_list(version),
         "ex_resource_url_list": get_ex_resource_url_list(version),
-        # TODO: Revisit this
         "ext": Config.get_hotpatch_ext(version),
         "gameserver": server,
         "gateway": server,
         "is_data_ready": True,
         "manifest": Config.get_hotpatch_manifest(version),
         "msg": "",
-        "oaserver_url": f"http://{Config.GameServer.IP}/oaserver",
+        "oaserver_url": f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/oaserver",
         "region_name": Config.RegionName,
         "retcode": 0,
         "server_cur_time": int(time.time()),
         "server_cur_timezone": 8,
         "server_ext": {
-            "cdkey_url": "http://127.0.0.1/common/",
+            "cdkey_url": f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/common/",
             "is_official": "1",
             "mihoyo_sdk_env": "0",
             "use_account_web_url": "1",
@@ -217,6 +215,6 @@ def get_ex_resource_url_list(version):
 
 def get_local_url_list(type, version):
     return [
-        f"http://{Config.GameServer.IP}/statics/{type}/{version.replace('.', '_')}",
-        f"http://{Config.GameServer.IP}/statics/{type}/{version.replace('.', '_')}",
+        f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/statics/{type}/{version.replace('.', '_')}",
+        f"http://{Config.SDKServer.IP}:{Config.SDKServer.Port}/statics/{type}/{version.replace('.', '_')}",
     ]

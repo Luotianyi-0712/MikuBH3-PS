@@ -44,12 +44,6 @@ Download resources & proto from [MikuBH3-Res](https://github.com/MikuLeaks/MikuB
 - Extract the `Proxy.zip` file anywhere you want.
 - Run `Sparkle-Proxy.exe` as administrator and open the game.
 
-## Connecting with the client (DLL method)
-
-- Download prebuild patch from [BH3-Patch](https://github.com/MikuLeaks/MikuBH3-PATCH/releases)
-- Extract the `BH3-Patch-Win64.zip` file into your game folder, where the game’s main executable (`BH3.exe`) is located.
-- Run `bh3-launcher.exe` as administrator.
-
 ## Usage/Examples
 
 To run the project use cmd or vscode and run
@@ -57,17 +51,19 @@ To run the project use cmd or vscode and run
 ```python
 py hi3
 ```
+
 ## Changing Stage in Abyss/Memorial Using JSON
 
 - **Superstring Dimension (Abyss)**
 
-    Open the `Battle.json` file and update `area1` to the preferred `SiteID` from `UltraEndlessSite.json`.
+  Open the `Battle.json` file and update `area1` to the preferred `SiteID` from `UltraEndlessSite.json`.
 
 - **Memorial Arena**
 
-    Open the `Battle.json` file and update the `boss_ids` as needed. You can find `boss_id` values in the `BossIdList` within `ExBossMonsterSchedule.json`.
+  Open the `Battle.json` file and update the `boss_ids` as needed. You can find `boss_id` values in the `BossIdList` within `ExBossMonsterSchedule.json`.
 
 ## Commands
+
 ```
 /help. Displays a list of available commands.
 /maxskill {avatar_id | all}. Maximize the skills of a specific avatar. Use 'all' to maximize the skills of all avatars.
